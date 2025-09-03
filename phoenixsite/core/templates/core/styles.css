@@ -1,0 +1,138 @@
+:root {
+  --phoenix-orange: #E65100;
+  --midnight-black: #1A1A1A;
+  --ash-white: #F5F5F5;
+  --white: #ffffff;
+  --light-blue: #3ba6ff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, var(--ash-white), #fdf2e9);
+  color: var(--midnight-black);
+  display: flex;
+  flex-direction: column; /* stack nav, content, footer */
+}
+
+body > footer {
+  margin-top: auto; /* push footer to bottom */
+}
+
+/* STICKY NAVBAR */
+.navbar {
+  background-color: var(--midnight-black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-logo {
+  max-height: 60px;
+  margin-left: 0;
+}
+
+/* align links and donate vertically */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* ensures vertical centering */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: var(--ash-white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Donate button same vertical padding but styled */
+.nav-links .donate {
+  background-color: var(--phoenix-orange);
+  color: var(--white);
+  border-radius: 24px;
+  padding: 0.75rem 1.5rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-links .donate:hover {
+  background-color: var(--light-blue);
+  transform: translateY(-2px);
+}
+
+/* Main content side-by-side layout */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  flex: 1; /* fill available vertical space */
+}
+
+/* Video styling */
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Mission text centered */
+.mission {
+  text-align: center;
+  background-color: #fff9f4;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.mission h2 {
+  color: var(--phoenix-orange);
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.mission p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer flush bottom */
+footer {
+  background-color: var(--midnight-black);
+  color: var(--ash-white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin: 0;
+}
