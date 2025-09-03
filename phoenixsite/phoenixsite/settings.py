@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'phoenixsite',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'phoenixsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "core/templates/core"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
